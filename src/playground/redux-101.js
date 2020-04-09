@@ -22,17 +22,24 @@ const store = createStore((state = { count: 0 }, action) => {
   }
 });
 
+// Subscribing to store
+const unsubscribe = store.subscribe(() => {
+  console.log(store.getState());
+});
+
 store.dispatch({
   type: "INCREMENT",
 });
 
-console.log(store.getState());
+// Unsubscribing from store
+unsubscribe();
 
+store.dispatch({
+  type: "INCREMENT",
+});
 store.dispatch({
   type: "RESET",
 });
 store.dispatch({
   type: "DECREMENT",
 });
-
-console.log(store.getState());
