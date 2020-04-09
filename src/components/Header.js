@@ -3,20 +3,16 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => (
   <header>
-    <h1>Expensify</h1>
-    <div>
-      <NavLink exact to="/" activeClassName="is-active">
-        Go home
-      </NavLink>{" "}
-      |{" "}
-      <NavLink to="/create" activeClassName="is-active">
-        Add Expense
-      </NavLink>{" "}
-      |{" "}
-      <NavLink to="/help" activeClassName="is-active">
-        Help
-      </NavLink>
-    </div>
+    <h1>Portfolio</h1>
+    <NavLink to="/" exact activeClassName="is-active">
+      Home Page
+    </NavLink>
+    <NavLink to="/portfolio" exact activeClassName="is-active">
+      Portfolio Home Page
+    </NavLink>
+    <NavLink to="/contact" activeClassName="is-active">
+      Contact Page
+    </NavLink>
   </header>
 );
 
