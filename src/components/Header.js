@@ -13,10 +13,6 @@ const Header = () => (
         Add Expense
       </NavLink>{" "}
       |{" "}
-      <NavLink to="/edit" activeClassName="is-active">
-        Edit Expense
-      </NavLink>{" "}
-      |{" "}
       <NavLink to="/help" activeClassName="is-active">
         Help
       </NavLink>
