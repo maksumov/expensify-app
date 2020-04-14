@@ -18,12 +18,7 @@ store.subscribe(() => {
 
 store.dispatch(addExpense({ description: 'Water bill', amount: 2200 }))
 store.dispatch(addExpense({ description: 'Gas bill', amount: 1200 }))
-store.dispatch(setTextFilter('water'))
-
-// Demonstrating automatic component rendering when store changes
-setTimeout(() => {
-  store.dispatch(setTextFilter('bill'))
-}, 3000)
+store.dispatch(addExpense({ description: 'Rent', amount: 122320, createdAt: 1000 }))
 
 const jsx = (
   <Provider store={store}>
