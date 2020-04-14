@@ -17,7 +17,7 @@ store.subscribe(() => {
 })
 
 store.dispatch(addExpense({ description: 'Water bill', amount: 2200 }))
-store.dispatch(addExpense({ description: 'Gas bill', amount: 1200 }))
+store.dispatch(addExpense({ description: 'Gas bill', amount: 1200, createdAt: 100 }))
 store.dispatch(addExpense({ description: 'Rent', amount: 122320, createdAt: 1000 }))
 
 const jsx = (
