@@ -18,8 +18,5 @@ const ExpenseListItem = ({ id, description, amount, createdAt, dispatch }) => (
   </div>
 )
 
-const mapStateToProps = (state) => ({
-  expenses: state.expenses,
-})
-
-export default connect(mapStateToProps)(ExpenseListItem)
+// We don't need access to the state so we don't need mapStateToProps
+export default connect()(ExpenseListItem)
