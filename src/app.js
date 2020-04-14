@@ -22,7 +22,7 @@ store.dispatch(setTextFilter('water'))
 
 // Demonstrating automatic component rendering when store changes
 setTimeout(() => {
-  store.dispatch(setTextFilter('rent'))
+  store.dispatch(setTextFilter('bill'))
 }, 3000)
 
 const jsx = (
