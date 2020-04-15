@@ -28,7 +28,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "moment": "^2.18.1",
+    "moment": "^2.19.3",
     "normalize.css": "^8.0.1",
     "react": "^16.1.1",
     "react-dates": "^21.8.0",
