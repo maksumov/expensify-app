@@ -32,7 +32,10 @@ export default class ExpenseForm extends Component {
     }
   }
   onDateChange = (createdAt) => {
-    this.setState(() => ({ createdAt }))
+    if (createdAt) {
+      console.log(createdAt)
+      this.setState(() => ({ createdAt }))
+    }
   }
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ focused }))
