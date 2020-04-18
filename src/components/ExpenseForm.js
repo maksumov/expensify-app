@@ -9,13 +9,18 @@ import 'react-dates/lib/css/_datepicker.css'
 // console.log(now.format('DD.MM.YYYY'))
 
 export default class ExpenseForm extends Component {
-  state = {
-    description: '',
-    note: '',
-    amount: '',
-    createdAt: moment(),
-    focused: false,
-    error: '',
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      description: props.expense ? props.expense.description : '',
+      note: props.expense ? props.expense.note : '',
+      amount: props.expense ? (props.expense.amount / 100).toString() : '',
+      createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+      focused: false,
+      error: '',
+      editMode: props.expense ? true : false,
+    }
   }
   onDescriptionChange = (e) => {
     const description = e.target.value
@@ -44,7 +49,6 @@ export default class ExpenseForm extends Component {
   }
   onDateChange = (createdAt) => {
     if (createdAt) {
-      console.log(createdAt)
       this.setState(() => ({ createdAt }))
     }
   }
@@ -66,7 +70,6 @@ export default class ExpenseForm extends Component {
         createdAt: this.state.createdAt.valueOf(),
         note: this.state.note,
       })
-      console.log('submitted!')
     }
   }
   render() {
@@ -97,7 +100,7 @@ export default class ExpenseForm extends Component {
             value={this.state.note}
             onChange={this.onNoteChange}
           ></textarea>
-          <button>Add expense</button>
+          <button>{this.state.editMode ? 'Update' : 'Add'} expense</button>
         </form>
       </div>
     )
