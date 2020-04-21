@@ -35,29 +35,26 @@ test('should render ExpenseListFilters with alt data correctly', () => {
 })
 
 test('should handle text change', () => {
-  const text = 'text'
+  const value = 'text'
   wrapper.find('input').simulate('change', {
-    target: {
-      value: text,
-    },
+    target: { value },
   })
-  expect(setTextFilter).toHaveBeenLastCalledWith(text)
+  expect(setTextFilter).toHaveBeenLastCalledWith(value)
 })
 
 test('should sort by date', () => {
+  const value = 'date'
+  wrapper.setProps({ filters: altFilters })
   wrapper.find('select').simulate('change', {
-    target: {
-      value: 'date',
-    },
+    target: { value },
   })
   expect(sortByDate).toHaveBeenCalled()
 })
 
 test('should sort by amount', () => {
+  const value = 'amount'
   wrapper.find('select').simulate('change', {
-    target: {
-      value: 'amount',
-    },
+    target: { value },
   })
   expect(sortByAmount).toHaveBeenCalled()
 })
