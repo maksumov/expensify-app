@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render if no expenses 1`] = `<div />`;
+
+exports[`should correctly render with many expenses 1`] = `
+<div>
+  <p>
+    Viewing 
+    3
+     expenses totalling 
+    $1,141.95
+  </p>
+</div>
+`;
+
+exports[`should correctly render with one expense 1`] = `
+<div>
+  <p>
+    Viewing 
+    1
+     expense totalling 
+    $1,095.00
+  </p>
+</div>
+`;
