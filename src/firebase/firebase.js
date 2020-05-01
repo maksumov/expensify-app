@@ -50,27 +50,27 @@ export { firebase, database as default }
 // //   console.log(data)
 // // })
 
-// // const expenses = [
-// //   {
-// //     description: 'Rent',
-// //     note: '',
-// //     amount: 12234,
-// //     createdAt: 1221,
-// //   },
-// //   {
-// //     description: 'Coffee',
-// //     note: '',
-// //     amount: 567,
-// //     createdAt: 2221,
-// //   },
-// //   {
-// //     description: 'Tea',
-// //     note: '',
-// //     amount: 123,
-// //     createdAt: 121,
-// //   },
-// // ]
-// // expenses.forEach((expense) => database.ref('expenses').push(expense))
+// const expenses = [
+//   {
+//     description: 'Rent',
+//     note: '',
+//     amount: 12234,
+//     createdAt: 1221,
+//   },
+//   {
+//     description: 'Coffee',
+//     note: '',
+//     amount: 567,
+//     createdAt: 2221,
+//   },
+//   {
+//     description: 'Tea',
+//     note: '',
+//     amount: 123,
+//     createdAt: 121,
+//   },
+// ]
+// expenses.forEach((expense) => database.ref('expenses').push(expense))
 
 // // database
 // //   .ref()

@@ -13,6 +13,8 @@ export default (state = expensesReducerDefaultState, action) => {
         // else return Object.assign({}, item, action.updates);
         else return { ...item, ...action.updates }
       })
+    case 'SET_EXPENSES':
+      return action.expenses
     default:
       return state
   }
