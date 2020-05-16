@@ -7,11 +7,3 @@ exports[`should correctly render LoginPage 1`] = `
   </button>
 </div>
 `;
-
-exports[`should render LoginPage component 1`] = `
-<div>
-  <button>
-    Login
-  </button>
-</div>
-`;

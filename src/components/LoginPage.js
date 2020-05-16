@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
-export const LoginPage = () => <button>Login</button>
-
-export default LoginPage
+export const LoginPage = () => (
+  <div>
+    <button>Login</button>
+  </div>
+)
