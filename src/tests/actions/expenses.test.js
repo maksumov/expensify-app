@@ -125,14 +125,21 @@ test('should fetch the expenses from firebase', (done) => {
 })
 
 test('should remove expenses from firebase', (done) => {
-  const id = 123
+  const id = expenses[2].id
   const store = createMockstore({})
-  store.dispatch(startRemoveExpense({ id })).then(() => {
-    const actions = store.getActions()
-    expect(actions[0]).toEqual({
-      type: 'REMOVE_EXPENSE',
-      id,
+  store
+    .dispatch(startRemoveExpense({ id }))
+    .then(() => {
+      const actions = store.getActions()
+      expect(actions[0]).toEqual({
+        type: 'REMOVE_EXPENSE',
+        id,
+      })
+      // Make sure that we have deleted expense from the database
+      return database.ref(`expenses/${id}`).once('value')
     })
-    done()
-  })
+    .then((snapshot) => {
+      expect(snapshot.val()).toBeFalsy()
+      done()
+    })
 })
