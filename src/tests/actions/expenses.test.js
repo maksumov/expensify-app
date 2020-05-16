@@ -145,7 +145,7 @@ test('should remove expenses from firebase', (done) => {
     })
 })
 
-test('should edit expenses from firebase', (done) => {
+test('should edit expense from firebase', (done) => {
   const id = expenses[2].id
   const store = createMockstore({})
   const updates = { note: 'New note value' }
