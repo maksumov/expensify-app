@@ -13,18 +13,14 @@ exports[`should render Header correctly 1`] = `
     >
       Go home
     </NavLink>
-     
-    |
-     
+     | 
     <NavLink
       activeClassName="is-active"
       to="/create"
     >
       Add Expense
     </NavLink>
-     
-    |
-     
+     | 
     <NavLink
       activeClassName="is-active"
       to="/help"
