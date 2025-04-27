@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "core-js": "^3.21.0",
-    "firebase": "^10.9.0",
+    "firebase": "^10.14.1",
     "express": "^4.21.2",
     "history": "^5.2.0",
     "moment": "^2.29.4",
